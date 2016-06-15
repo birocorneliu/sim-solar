@@ -1,26 +1,27 @@
 application: sim-solar
-version: 1
+version: 2
 runtime: python27
 api_version: 1
 threadsafe: true
 
 
 handlers:
-
 - url: /css
-  static_dir: static/css
+  static_dir: assets/css
 
 - url: /js
-  static_dir: static/js
+  static_dir: assets/js
+
+- url: /fonts
+  static_dir: assets/fonts
 
 - url: /images
-  static_dir: static/images
+  static_dir: assets/images
 
 - url: /.*
   script: main.application
 
 
-# [START libraries]
 libraries:
 - name: webapp2
   version: latest
